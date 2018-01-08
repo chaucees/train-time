@@ -1,0 +1,60 @@
+body {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 14pt;
+}
+
+h1 {
+    font-size: 48pt;
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    font-size: 22pt;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+
+}
+
+.container {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top:1%;
+}
+
+.container2 {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top:1%;
+    background-color: blue;
+    padding: 5px 0px 5px 5px;
+}
+
+#section1 {
+    background-color: blue;
+    padding: 20px;
+    text-align:center;
+    width: auto;
+}
+
+#section2 {
+    background-color: #e5e5e5;
+    padding: 20px;
+    text-align:left;
+    height: 400px;
+    width: auto;
+}
+
+#section3 {
+    background-color: #e5e5e5;
+    padding: 20px;
+    text-align:left;
+    height: 400px;
+    width: auto;
+}
