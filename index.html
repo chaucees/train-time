@@ -1,37 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+
+<html lang="en-us">
+
+  <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <title>Train Time Tracker</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<title>It's Train Time</title>
-</head>
-<body>
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
 
+    <!-- Moment.js Reference -->
+    <!-- <script src="http://momentjs.com/downloads/moment.js"></script>   -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Employee Tracker -->
     <div class="container">
 
-    <div class="container" id="section1">
-        <h1>Train Time</h1>
+      <!-- Jumbotron -->
+      <div class="jumbotron" style="background-color: rgb(14, 14, 70); color: white">
+        <h1 class="text-center">Train Tracker</h1>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-12">
+
+        <!-- Current Employees-->
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
+            </div>
+            <div class="panel-body">
+              <table class="table table-hover" id='employee-table'>
+                <thead>
+                  <tr>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency (Minutes)</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Add Employee  -->
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title"><strong>Add Train</strong></h3>
+            </div>
+            <div class="panel-body">
+
+              <!-- Entry Form -->
+              <form>
+                <div class="form-group">
+                  <label for="employee-name-input">Train Name</label>
+                  <input class="form-control" id="employee-name-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="role-input">Destination</label>
+                  <input class="form-control" id="role-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="start-input">First Train Time (HH:mm - military time)</label>
+                  <input class="form-control" id="start-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="rate-input">Frequency (min)</label>
+                  <input class="form-control" id="rate-input" type="text">
+                </div>
+                <button class="btn btn-primary" id="add-employee-btn" type="submit">Submit</button>
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
+
+    <!-- JavaScript -->
+    <script src="logic.js"></script>
     
-    <div class="container2"><h2>Current Train Schedule</h2></div>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
 
-    <div class="container" id="section2">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, quo. Fugit modi aspernatur aliquam expedita nihil a dolor quis culpa deleniti esse illum, vitae quidem necessitatibus, amet labore architecto. Atque, aut pariatur quia ex recusandae animi molestias ducimus minima architecto, eum, vitae labore quibusdam alias vero? Nulla harum eos incidunt
-    </div>
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <div class="container2"><h2>Add Train</h2></div>
 
-    <div class="container" id="section3">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, quo. Fugit modi aspernatur aliquam expedita nihil a dolor quis culpa deleniti esse illum, vitae quidem necessitatibus, amet labore architecto. Atque, aut pariatur quia ex recusandae animi molestias ducimus minima architecto, eum, vitae labore quibusdam alias vero? Nulla harum eos incidunt
-    </div>
 
-</div>
+  </body>
 
-    
-</body>
 </html>
